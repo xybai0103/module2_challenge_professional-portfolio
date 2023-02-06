@@ -1,0 +1,227 @@
+:root {
+    --main-color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    background-color: var(--main-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    min-width: fit-content;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header h1, header a {
+    color: white;
+    line-height: 150%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a, p {
+    font-size: 1.5rem;
+}
+
+#about-me-text p {
+    text-align: justify;
+    line-height: 130%;
+    margin: 2rem 0;
+}
+
+figure a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#paragraph-header {
+    margin: 1% 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    width: 95%;
+    padding: 4rem 0 0 2rem;
+    margin-bottom: 2rem;
+}
+
+/*section name on the side*/
+.section-header {
+    width: 15%;
+}
+
+/*postion section name in the middle of the height*/
+.section-header h1 {
+    text-align: right;
+    position: relative;
+    top: 40%;
+}
+
+/*vertical line*/
+.vl {
+    border-left: 0.8rem solid var(--main-color);
+    margin-left: 1.5rem;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 4rem;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#avatar {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#about-me-text {
+    width: 60%;
+}
+
+figure {
+    border: 0.3rem solid var(--main-color);
+}
+
+/*make the first work larger than the others*/
+#app-large {
+    width: 100%;
+    height: 46%;
+    max-height: 800px;
+}
+
+.app-small {
+    width: 49%;
+    height: 25%;
+    max-height: 400px;
+}
+
+.app-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(0.4);
+}
+
+.app-title {
+    background-color: var(--main-color);
+    position: relative;
+    bottom: 60%;
+    border-top-right-radius: 2rem;
+}
+
+/*make title bar of the first work larger than the others*/
+#app-large .app-title {
+    font-size: 2.5rem;
+    padding: 4rem;
+    width: 45%;
+}   
+
+.app-small .app-title {
+    font-size: 2rem;
+    padding: 3rem;
+    width: 60%;
+}   
+
+#contact-me {
+    padding-bottom: 5rem;
+}
+
+#contact-me .section-header {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+#contact-me .section-content {
+    justify-content: space-between;
+    align-content:center;
+}
+
+#contact-me a {
+    line-height: 100%;
+    padding: 4rem 8rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+    border: solid 0.5rem var(--main-color);
+    border-style: double;
+    border-radius: 2rem;
+}
+
+/*effects when hovering*/
+header a:hover {
+    font-size: 3rem;
+}
+
+figure:hover .app-img {
+        filter: opacity(1);
+    }
+
+figure:hover .app-title {
+        box-shadow: 0 0 3rem 3rem white;
+    }
+
+#contact-me a:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    header,
+    nav,
+    section,
+    .section-content{
+        flex-direction: column;
+      }
+
+    .section-header,
+    .section-content,
+    #avatar,
+    #about-me-text {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    /*make works stack*/
+    #app-large, .app-small {
+        width: 100%;
+        margin-bottom: 10%;
+        max-height: none;
+    }
+    /*make title of each works below the image and delete border style*/
+    #app-large .app-title, .app-small .app-title {
+        width: 100%;
+        border-top-right-radius: 0%;
+    }
+
+    .section-header h1 {
+        text-align: center;
+    }
+
+    .section-content{
+        align-items: center;
+    }
+    /*make the vertical line disapper*/
+    .vl {
+        display: none;
+    }
+    }
