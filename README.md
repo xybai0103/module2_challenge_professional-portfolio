@@ -31,7 +31,7 @@ The following image demonstrates the website appearance:
 
 ## Link to the website
 
-https://xybai0103.github.io/module2_challenge_professional-portfolio/
+https://xybai0103.github.io/my-professional-portfolio/
 
 ## Credits
 
